@@ -1,3 +1,17 @@
-export function [CLASSNAME](): string {
-    return '[CLASSNAME]';
+import { promisifyApi, ApiParams, IResponseData } from 'kait-common';
+
+export interface I[CLASSNAME]Option extends ApiParams {
+    /* 提示标题 */
+    title?: string;
 }
+
+function [CLASSNAME](params: I[CLASSNAME]Option, callback?: any) {
+    Kait.callHandler('KN.Window.[CLASSNAME]', params, function (response: IResponseData) {
+        console.log('[CLASSNAME] - JS got response: ' + JSON.stringify(response));
+        if (callback) {
+            callback(response);
+        }
+    })
+}
+
+export const Kait[CLASSNAME] = promisifyApi([CLASSNAME])
