@@ -1,4 +1,4 @@
-import { promisifyApi, ApiParams, IResponseData } from 'kait-common';
+import { promisifyApi} from 'kait-common';
 
 export interface I[CLASSNAME]Option extends ApiParams {
     /* 提示标题 */
