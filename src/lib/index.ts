@@ -5,7 +5,7 @@ export interface I[CLASSNAME]Option extends ApiParams {
     title?: string;
 }
 
-function [CLASSNAME](params: I[CLASSNAME]Option, callback?: any) {
+function kait[CLASSNAME](params: I[CLASSNAME]Option, callback?: any) {
     Kait.callHandler('KN.Window.[CLASSNAME]', params, function (response: IResponseData) {
         console.log('[CLASSNAME] - JS got response: ' + JSON.stringify(response));
         if (callback) {
@@ -14,4 +14,4 @@ function [CLASSNAME](params: I[CLASSNAME]Option, callback?: any) {
     })
 }
 
-export const Kait[CLASSNAME] = promisifyApi([CLASSNAME])
+export const [FNNAME] = promisifyApi(kait[CLASSNAME])

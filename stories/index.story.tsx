@@ -3,7 +3,7 @@ import { Button } from "antd";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import {
-  Kait[CLASSNAME]
+  [FNNAME]
 } from '../src/';
 
 export const Simple = () => {
@@ -11,7 +11,7 @@ export const Simple = () => {
   const [isSuccess, setIsSuccess] = useState(false)
 
   function onClick() {
-     Kait[CLASSNAME]({"title": "hello[CLASSNAME]", "content": "story"}).then((data: any)=>{
+     [FNNAME]({"title": "hello[CLASSNAME]", "content": "story"}).then((data: any)=>{
       setText(JSON.stringify(data));
       setIsSuccess(data.success);
      })
