@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { Button } from "antd";
-import { Kait[CLASSNAME] } from '../src/index';
+import { [FNNAME] } from '../src/index';
 
 const App = () => {
   const [text, setText] = useState("noop")
   const onClick = () => {
-     Kait[CLASSNAME]({"title": "Kait[CLASSNAME]", "content": "story"}).then((data: any)=>{
+     [FNNAME]({"title": "Kait[CLASSNAME]", "content": "story"}).then((data: any)=>{
       setText("result: " + JSON.stringify(data));
      })
   }
