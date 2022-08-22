@@ -24,7 +24,7 @@ export const Simple = () => {
     <div>result: {text}</div>
     <div>调用结果：</div>
     <div>{isSuccess ? 'success' : 'failure'}</div>
-    <div>{data}</div>
+    <div>{JSON.stringify(data)}</div>
   </>
 }
 
