@@ -14,7 +14,7 @@ export const Simple = () => {
   function onClick() {
      [FNNAME]({"title": "hello[CLASSNAME]", "content": "story"}).then((result: any)=>{
       setText(JSON.stringify(result));
-      setText(result.data || {})
+      setData(result.data || {})
       setIsSuccess(result.success);
      })
   }
